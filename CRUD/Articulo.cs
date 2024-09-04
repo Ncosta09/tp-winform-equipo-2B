@@ -13,6 +13,8 @@ namespace CRUD
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Precio { get; set; }
-
+        public Categoria Categoria { get; set; }
+        public Marca Marca { get; set; }
+        public Imagen Imagen { get; set; }
     }
 }
