@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD
+namespace Dominio
 {
-    internal class Imagen
+    public class Imagen
     {
         public int Id { get; set; }
         public string imgUrl { get; set; }
