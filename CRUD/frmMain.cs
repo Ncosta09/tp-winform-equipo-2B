@@ -16,5 +16,22 @@ namespace CRUD
         {
             InitializeComponent();
         }
+
+        private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach(var item in Application.OpenForms)
+            {
+                if(item.GetType() == typeof(frmVerTodos))
+                {
+                    return;
+                }
+            }
+
+            frmVerTodos ventana = new frmVerTodos();
+            ventana.MdiParent = this;
+            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
     }
 }
