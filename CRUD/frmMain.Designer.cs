@@ -50,7 +50,7 @@
             this.eliminarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1681, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(1345, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@
             this.verTodosToolStripMenuItem,
             this.verDetalleToolStripMenuItem});
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 34);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.verToolStripMenuItem.Text = "&Ver";
             // 
             // verTodosToolStripMenuItem
@@ -79,25 +79,25 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(66, 34);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.buscarToolStripMenuItem.Text = "&Buscar";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(77, 34);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.agregarToolStripMenuItem.Text = "&Agregar";
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(87, 34);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.modificarToolStripMenuItem.Text = "&Modificar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 34);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.eliminarToolStripMenuItem.Text = "&Eliminar";
             // 
             // frmMain
@@ -109,8 +109,8 @@
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "frmMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
