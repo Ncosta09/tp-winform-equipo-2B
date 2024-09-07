@@ -29,7 +29,14 @@ namespace CRUD
 
             frmVerTodos ventana = new frmVerTodos();
             ventana.MdiParent = this;
-            ventana.TopLevel = false;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregar ventana = new frmAgregar();
+            ventana.MdiParent = this;
             ventana.Dock = DockStyle.Fill;
             ventana.Show();
         }
