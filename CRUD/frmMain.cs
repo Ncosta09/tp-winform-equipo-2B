@@ -19,6 +19,7 @@ namespace CRUD
 
         private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             foreach(var item in Application.OpenForms)
             {
                 if(item.GetType() == typeof(frmVerTodos))
@@ -26,6 +27,7 @@ namespace CRUD
                     return;
                 }
             }
+            */
 
             frmVerTodos ventana = new frmVerTodos();
             ventana.MdiParent = this;
