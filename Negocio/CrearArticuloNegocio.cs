@@ -16,8 +16,14 @@ namespace Negocio
 			try
 			{
 				//Consulta a la DB ¬
-				datos.setConsulta("insrt into Articulos...");
-				datos.ejecutarAccion();
+				datos.setConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, Precio, IdCategoria, IdMarca) VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @idCategoria, @idMarca)");
+				datos.setParametro("@Codigo", nuevo.Codigo);
+                datos.setParametro("@Nombre", nuevo.Nombre);
+                datos.setParametro("@Descripcion", nuevo.Descripcion);
+                datos.setParametro("@Precio", nuevo.Precio);
+                datos.setParametro("@idCategoria", nuevo.Categoria.Id);
+                datos.setParametro("@idMarca", nuevo.Marca.Id);
+                datos.ejecutarAccion();
 			}
 			catch (Exception ex)
 			{

@@ -30,8 +30,8 @@ namespace CRUD
                 art.Nombre = txtNombre.Text;
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = int.Parse(txtPrecio.Text);
-                //art.Categoria = cbCategoria.SelectedIndex;
-                //art.Marca = cbMarca.SelectedIndex;
+                art.Categoria = (Categoria)cbCategoria.SelectedItem;
+                art.Marca = (Marca)cbMarca.SelectedItem;
                 //art.Imagen = txtUrl.Text;
 
                 artNegocio.crear(art);
@@ -39,6 +39,23 @@ namespace CRUD
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio catNegocio = new CategoriaNegocio();
+            MarcaNegocio marNegocio = new MarcaNegocio();
+
+            try
+            {
+                cbCategoria.DataSource = catNegocio.listar();
+                cbMarca.DataSource = marNegocio.listar();
+            }
+            catch (Exception ex )
+            {
+
                 MessageBox.Show(ex.ToString());
             }
         }
