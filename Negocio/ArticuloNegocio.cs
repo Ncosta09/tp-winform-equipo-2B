@@ -19,7 +19,7 @@ namespace Negocio
             try
             {
                 //Consulta a la DB ¬
-                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca, I.ImagenUrl AS Imagen FROM ARTICULOS A, IMAGENES I, CATEGORIAS C, MARCAS M WHERE I.IdArticulo = A.Id AND C.Id = A.IdCategoria AND M.Id = A.IdMarca");
+                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca, I.ImagenUrl AS Imagen FROM ARTICULOS A LEFT JOIN IMAGENES I ON I.IdArticulo = A.Id LEFT JOIN CATEGORIAS C ON C.Id = A.IdCategoria LEFT JOIN MARCAS M ON M.Id = A.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -27,20 +27,20 @@ namespace Negocio
                     Articulo art = new Articulo();
 
                     art.ID = (int)datos.Lector["Id"];
-                    art.Codigo = (string)datos.Lector["Codigo"];
-                    art.Nombre = (string)datos.Lector["Nombre"];
-                    art.Descripcion = (string)datos.Lector["Descripcion"];
-                    art.Precio = (decimal)datos.Lector["Precio"];
+                    art.Codigo = datos.Lector["Codigo"] is DBNull ? "Sin Codigo" : (string)datos.Lector["Codigo"];
+                    art.Nombre = datos.Lector["Nombre"] is DBNull ? "Sin Nombre" : (string)datos.Lector["Nombre"];
+                    art.Descripcion = datos.Lector["Descripcion"] is DBNull ? "Sin Descripcion" : (string)datos.Lector["Descripcion"];
+                    art.Precio = datos.Lector["Precio"] is DBNull ? 0000 : (decimal)datos.Lector["Precio"];
                     //Categoria
                     art.Categoria = new Categoria();
-                    art.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    art.Categoria.Descripcion = datos.Lector["Categoria"] is DBNull ? "Sin Categoria" : (string)datos.Lector["Categoria"];              
                     //Marca
                     art.Marca = new Marca();
-                    art.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    art.Marca.Descripcion = datos.Lector["Marca"] is DBNull ? "Sin Marca" : (string)datos.Lector["Marca"];
                     //Imagen
                     art.Imagen = new Imagen();
-                    art.Imagen.imgUrl = (string)datos.Lector["Imagen"];
-
+                    art.Imagen.imgUrl = datos.Lector["Imagen"] is DBNull ? "Sin Imagen" : (string)datos.Lector["Imagen"];
+                    
                     lista.Add(art);
                 }
 

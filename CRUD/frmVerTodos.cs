@@ -23,11 +23,18 @@ namespace CRUD
         private void frmVerTodos_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulo = negocio.listar();
-            dgvArticulos.DataSource = listaArticulo;
-            dgvArticulos.Columns["Imagen"].Visible = false;
-            //dgvArticulos.Columns["Id"].Visible = false;
-            pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
+            try
+            {
+                listaArticulo = negocio.listar();
+                dgvArticulos.DataSource = listaArticulo;
+                dgvArticulos.Columns["Imagen"].Visible = false;
+                //dgvArticulos.Columns["Id"].Visible = false;
+                pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
