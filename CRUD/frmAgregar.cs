@@ -30,11 +30,12 @@ namespace CRUD
                 art.Nombre = txtNombre.Text;
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = int.Parse(txtPrecio.Text);
+                art.Imagen = new Imagen { imgUrl = txtUrl.Text }; //VER ESTO SI ESTA OK ??
                 art.Categoria = (Categoria)cbCategoria.SelectedItem;
                 art.Marca = (Marca)cbMarca.SelectedItem;
-                //art.Imagen = txtUrl.Text;
 
                 artNegocio.crear(art);
+                //artNegocio.agregarImagen(art);
                 MessageBox.Show("Agregado con Exito!");
             }
             catch (Exception ex)
@@ -57,6 +58,23 @@ namespace CRUD
             {
 
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txtUrl_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrl.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbArticuloPreview.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbArticuloPreview.Load("https://archive.org/download/placeholder-image/placeholder-image.jpg");
             }
         }
     }

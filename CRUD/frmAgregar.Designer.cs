@@ -47,10 +47,10 @@
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbArticuloPreview = new System.Windows.Forms.PictureBox();
             this.lblPreview = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticuloPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // lblId
@@ -196,6 +196,7 @@
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.Size = new System.Drawing.Size(296, 22);
             this.txtUrl.TabIndex = 16;
+            this.txtUrl.Leave += new System.EventHandler(this.txtUrl_Leave);
             // 
             // txtPrecio
             // 
@@ -261,14 +262,15 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // pictureBox1
+            // pbArticuloPreview
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(765, 147);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 358);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pbArticuloPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbArticuloPreview.Location = new System.Drawing.Point(765, 147);
+            this.pbArticuloPreview.Name = "pbArticuloPreview";
+            this.pbArticuloPreview.Size = new System.Drawing.Size(358, 358);
+            this.pbArticuloPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbArticuloPreview.TabIndex = 18;
+            this.pbArticuloPreview.TabStop = false;
             // 
             // lblPreview
             // 
@@ -286,7 +288,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 618);
             this.Controls.Add(this.lblPreview);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbArticuloPreview);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.cbCategoria);
@@ -311,7 +313,7 @@
             this.Text = "frmAgregar";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticuloPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +340,7 @@
         private System.Windows.Forms.ComboBox cbMarca;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbArticuloPreview;
         private System.Windows.Forms.Label lblPreview;
     }
 }
