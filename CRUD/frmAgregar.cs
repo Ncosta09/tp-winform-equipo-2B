@@ -82,5 +82,11 @@ namespace CRUD
                 pbArticuloPreview.Load("https://archive.org/download/placeholder-image/placeholder-image.jpg");
             }
         }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 13)
+                e.Handled = true;
+        }
     }
 }
