@@ -35,7 +35,12 @@ namespace CRUD
                 art.Marca = (Marca)cbMarca.SelectedItem;
 
                 artNegocio.crear(art);
-                //artNegocio.agregarImagen(art);
+                int idArticulo = artNegocio.obtenerUltimoId();
+                if (idArticulo > 0) 
+                {
+                    artNegocio.agregarImagen(idArticulo, art.Imagen.imgUrl);
+                }
+
                 MessageBox.Show("Agregado con Exito!");
             }
             catch (Exception ex)
