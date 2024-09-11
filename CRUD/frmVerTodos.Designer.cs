@@ -151,6 +151,7 @@
             this.BtnModificarArticulo.Text = "Modificar";
             this.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarArticulo.UseVisualStyleBackColor = true;
+            this.BtnModificarArticulo.Click += new System.EventHandler(this.BtnModificarArticulo_Click);
             // 
             // frmVerTodos
             // 

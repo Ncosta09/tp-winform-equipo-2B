@@ -88,5 +88,6 @@ namespace CRUD
             if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 13)
                 e.Handled = true;
         }
+
     }
 }

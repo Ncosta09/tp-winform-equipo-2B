@@ -103,6 +103,21 @@ namespace CRUD
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void BtnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(frmModificar))
+
+                    return;
+            }
+
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmModificar modificarArticulo = new frmModificar(seleccionado);
+            modificarArticulo.ShowDialog();
+        }
     }
     }
 
