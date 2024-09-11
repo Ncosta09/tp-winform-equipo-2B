@@ -42,5 +42,13 @@ namespace CRUD
             ventana.Dock = DockStyle.Fill;
             ventana.Show();
         }
+
+        private void busquedaAvanzadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVerTodos ventana = new frmVerTodos();
+            ventana.MdiParent = this;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
     }
 }
