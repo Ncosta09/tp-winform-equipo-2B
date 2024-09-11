@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerTodos));
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.groupBoxFiltro = new System.Windows.Forms.GroupBox();
@@ -36,6 +37,7 @@
             this.labelCampo = new System.Windows.Forms.Label();
             this.comboBoxCampo = new System.Windows.Forms.ComboBox();
             this.comboBoxCriterio = new System.Windows.Forms.ComboBox();
+            this.BtnModificarArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.groupBoxFiltro.SuspendLayout();
@@ -53,7 +55,7 @@
             this.dgvArticulos.RowTemplate.Height = 24;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(636, 317);
-            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pbArticulo
@@ -78,7 +80,7 @@
             this.groupBoxFiltro.Location = new System.Drawing.Point(468, 42);
             this.groupBoxFiltro.Name = "groupBoxFiltro";
             this.groupBoxFiltro.Size = new System.Drawing.Size(478, 46);
-            this.groupBoxFiltro.TabIndex = 61;
+            this.groupBoxFiltro.TabIndex = 0;
             this.groupBoxFiltro.TabStop = false;
             this.groupBoxFiltro.Text = "Filtro Avanzado";
             // 
@@ -87,10 +89,11 @@
             this.btnBusquedaAvanzada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBusquedaAvanzada.BackColor = System.Drawing.SystemColors.Control;
             this.btnBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBusquedaAvanzada.Image = ((System.Drawing.Image)(resources.GetObject("btnBusquedaAvanzada.Image")));
             this.btnBusquedaAvanzada.Location = new System.Drawing.Point(439, 13);
             this.btnBusquedaAvanzada.Name = "btnBusquedaAvanzada";
             this.btnBusquedaAvanzada.Size = new System.Drawing.Size(23, 21);
-            this.btnBusquedaAvanzada.TabIndex = 58;
+            this.btnBusquedaAvanzada.TabIndex = 4;
             this.btnBusquedaAvanzada.UseVisualStyleBackColor = false;
             this.btnBusquedaAvanzada.Click += new System.EventHandler(this.btnBusquedaAvanzada_Click);
             // 
@@ -99,7 +102,7 @@
             this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(327, 13);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(96, 20);
-            this.textBoxFiltroAvanzado.TabIndex = 57;
+            this.textBoxFiltroAvanzado.TabIndex = 3;
             // 
             // labelCampo
             // 
@@ -108,7 +111,7 @@
             this.labelCampo.Location = new System.Drawing.Point(16, 15);
             this.labelCampo.Name = "labelCampo";
             this.labelCampo.Size = new System.Drawing.Size(51, 16);
-            this.labelCampo.TabIndex = 56;
+            this.labelCampo.TabIndex = 0;
             this.labelCampo.Text = "Campo";
             // 
             // comboBoxCampo
@@ -125,7 +128,7 @@
             this.comboBoxCampo.Location = new System.Drawing.Point(73, 13);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCampo.TabIndex = 55;
+            this.comboBoxCampo.TabIndex = 1;
             this.comboBoxCampo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampo_SelectedIndexChanged);
             // 
             // comboBoxCriterio
@@ -135,7 +138,19 @@
             this.comboBoxCriterio.Location = new System.Drawing.Point(200, 13);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxCriterio.TabIndex = 54;
+            this.comboBoxCriterio.TabIndex = 2;
+            // 
+            // BtnModificarArticulo
+            // 
+            this.BtnModificarArticulo.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarArticulo.Image")));
+            this.BtnModificarArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnModificarArticulo.Location = new System.Drawing.Point(9, 46);
+            this.BtnModificarArticulo.Name = "BtnModificarArticulo";
+            this.BtnModificarArticulo.Size = new System.Drawing.Size(77, 37);
+            this.BtnModificarArticulo.TabIndex = 19;
+            this.BtnModificarArticulo.Text = "Modificar";
+            this.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnModificarArticulo.UseVisualStyleBackColor = true;
             // 
             // frmVerTodos
             // 
@@ -143,6 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(958, 502);
+            this.Controls.Add(this.BtnModificarArticulo);
             this.Controls.Add(this.groupBoxFiltro);
             this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.dgvArticulos);
@@ -169,5 +185,6 @@
         private System.Windows.Forms.Label labelCampo;
         private System.Windows.Forms.ComboBox comboBoxCampo;
         private System.Windows.Forms.ComboBox comboBoxCriterio;
+        private System.Windows.Forms.Button BtnModificarArticulo;
     }
 }
