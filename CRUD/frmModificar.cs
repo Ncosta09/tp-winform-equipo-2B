@@ -42,8 +42,7 @@ namespace CRUD
                 tbxCodigo.Text = articulo.Codigo;
                 tbxNombre.Text = articulo.Nombre;
                 tbxDescripcion.Text = articulo.Descripcion;
-                Imagen imagen = new Imagen();
-                tbxUrl.Text = imagen.imgUrl;// ver porque no quiere cargar
+                tbxUrl.Text = articulo.Imagen.ToString();// ver porque no quiere cargar
                 CargarImagen(tbxUrl.Text);
                 tbxPrecio.Text = articulo.Precio.ToString();
                 cbxCategoria.SelectedValue = articulo.Categoria.Id;
@@ -80,13 +79,13 @@ namespace CRUD
                 articulo.Codigo = tbxCodigo.Text;
                 articulo.Nombre = tbxNombre.Text;
                 articulo.Descripcion = tbxDescripcion.Text;
-               // articulo.Imagen = (Imagen)int.Parse(tbxUrl.Text); VER CASTEO PARA QUE FUNCIONE
+                articulo.Imagen.imgUrl = tbxUrl.Text;
                 articulo.Precio = int.Parse(tbxPrecio.Text);
                 articulo.Marca = (Marca)cbxMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cbxCategoria.SelectedItem;
 
                 artNegocio.modificar(articulo);
-                //ImaNegocio.modificar(articulo);
+                ImaNegocio.modificar(articulo);
 
                 Close();
             }

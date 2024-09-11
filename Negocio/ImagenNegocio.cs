@@ -31,14 +31,15 @@ namespace Negocio
             }
         }
 
-        public void modificar(Imagen img)
+        public void modificar(Articulo img)
         {
             AccesoDatos datos = new AccesoDatos();
+            Imagen art = new Imagen();
             try
             {
                 datos.setConsulta("update IMAGENES set ImagenUrl = @URL where IdArticulo = @Id");
-                datos.setParametro("@URL", img.imgUrl);
-                datos.setParametro("@Id", img.Id);
+                datos.setParametro("@URL", img.Imagen);
+                datos.setParametro("@Id", img.ID);
 
                 datos.ejecutarAccion();
             }
