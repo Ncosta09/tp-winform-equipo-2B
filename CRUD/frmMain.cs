@@ -50,5 +50,13 @@ namespace CRUD
             ventana.Dock = DockStyle.Fill;
             ventana.Show();
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                frmEliminar ventana = new frmEliminar();
+                ventana.MdiParent = this;
+                ventana.Dock = DockStyle.Fill;
+                ventana.Show();
+        }
     }
 }

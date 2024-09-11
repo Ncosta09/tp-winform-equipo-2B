@@ -52,6 +52,12 @@
     <Compile Include="frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminar.Designer.cs">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminar.resx">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -116,8 +125,19 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\icons8-atrás-16.png" />
+    <Content Include="Resources\icons8-atrás-161.png" />
+    <Content Include="Resources\icons8-atrás-64.png" />
+    <Content Include="Resources\icons8-modificar-16.png" />
+    <Content Include="Resources\imagen-de-prueba-320x240-1.jpeg" />
+    <Content Include="Resources\list.png" />
+    <Content Include="Resources\loupe_79257.png" />
+    <Content Include="Resources\lupa1.png" />
+    <Content Include="Resources\multiply.png" />
+    <Content Include="Resources\plus.png" />
+    <Content Include="Resources\plus1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

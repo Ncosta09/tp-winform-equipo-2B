@@ -30,7 +30,7 @@ namespace CRUD
                 dgvArticulos.DataSource = listaArticulo;
                 dgvArticulos.Columns["Imagen"].Visible = false;
                 //dgvArticulos.Columns["Id"].Visible = false;
-                pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
+                //pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)
             {
