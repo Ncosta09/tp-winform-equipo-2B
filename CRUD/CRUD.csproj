@@ -64,6 +64,12 @@
     <Compile Include="frmEliminar.Designer.cs">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarMarca.Designer.cs">
+      <DependentUpon>frmEliminarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarMarca.resx">
+      <DependentUpon>frmEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
