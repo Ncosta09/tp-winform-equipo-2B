@@ -24,6 +24,9 @@ namespace CRUD
         }
         private void frmEliminarMarca_Load(object sender, EventArgs e)
         {
+            tbxEliminarMarca.Enabled = false;
+            tbxEliminarMarca.BackColor = Color.White;
+            tbxEliminarMarca.ForeColor = Color.Black;
             actualizarMarcas();
         }
 
@@ -39,7 +42,6 @@ namespace CRUD
                     seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
                     negocio.eliminarMarca(seleccionado.Id);
                     actualizarMarcas();
-                    
                 }
             }
 

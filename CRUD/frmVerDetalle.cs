@@ -32,12 +32,24 @@ namespace CRUD
                 CargarImagen(articulo.Imagen.imgUrl);
                 tbxCategoria.Text= articulo.Categoria.Descripcion.ToString();
                 tbxMarca.Text= articulo.Marca.Descripcion.ToString();
-                tbxCodigo.ReadOnly = true;
-                tbxNombre.ReadOnly = true;
-                tbxDescripcion.ReadOnly = true;
-                tbxPrecio.ReadOnly = true;
-                tbxCategoria.ReadOnly = true;
-                tbxMarca.ReadOnly = true;
+                tbxCodigo.Enabled = false;
+                tbxNombre.Enabled = false;
+                tbxDescripcion.Enabled = false;
+                tbxPrecio.Enabled = false;
+                tbxCategoria.Enabled = false;
+                tbxMarca.Enabled = false;
+                tbxCodigo.BackColor = Color.White;
+                tbxCodigo.ForeColor = Color.Black;
+                tbxNombre.BackColor = Color.White;
+                tbxNombre.ForeColor = Color.Black;
+                tbxDescripcion.BackColor = Color.White;
+                tbxDescripcion.ForeColor = Color.Black;
+                tbxPrecio.BackColor = Color.White;
+                tbxPrecio.ForeColor = Color.Black;
+                tbxCategoria.BackColor = Color.White;
+                tbxCategoria.ForeColor = Color.Black;
+                tbxMarca.BackColor = Color.White;
+                tbxMarca.ForeColor = Color.Black;
 
             }
             catch (Exception ex)
@@ -55,7 +67,7 @@ namespace CRUD
             }
             catch (Exception ex)
             {
-                pbxArticulo.Load("https://cdn.icon-icons.com/icons2/3001/PNG/512/default_filetype_file_empty_document_icon_187718.png");
+                pbxArticulo.Load("https://archive.org/download/placeholder-image/placeholder-image.jpg");
             }
         }
 
