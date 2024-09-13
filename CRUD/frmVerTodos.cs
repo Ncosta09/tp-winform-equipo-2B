@@ -106,17 +106,20 @@ namespace CRUD
 
         private void BtnModificarArticulo_Click(object sender, EventArgs e)
         {
-            foreach (var item in Application.OpenForms)
+            /*foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(frmModificar))
 
                     return;
-            }
+            }*/
 
             Articulo seleccionado;
             seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            frmModificar modificarArticulo = new frmModificar(seleccionado);
-            modificarArticulo.ShowDialog();
+            frmAgregar modificarArticulo = new frmAgregar(seleccionado);
+
+            modificarArticulo.MdiParent = this.MdiParent;
+            modificarArticulo.Dock = DockStyle.Fill;
+            modificarArticulo.Show();
         }
 
         private void dgvArticulos_DoubleClick(object sender, EventArgs e)

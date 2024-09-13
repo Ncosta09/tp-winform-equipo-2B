@@ -14,34 +14,54 @@ namespace CRUD
 {
     public partial class frmAgregar : Form
     {
+        private Articulo articulo = null;
         public frmAgregar()
         {
             InitializeComponent();
         }
 
+        public frmAgregar(Articulo articuloSeleccionado)
+        {
+            InitializeComponent();
+            this.articulo = articuloSeleccionado;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo();
+            //Articulo art = new Articulo();
             CrearArticuloNegocio artNegocio = new CrearArticuloNegocio();
+            ModificarArticuloNegocio artMod = new ModificarArticuloNegocio();
 
             try
             {
-                art.Codigo = txtCodigo.Text;
-                art.Nombre = txtNombre.Text;
-                art.Descripcion = txtDescripcion.Text;
-                art.Precio = int.Parse(txtPrecio.Text);
-                art.Imagen = new Imagen { imgUrl = txtUrl.Text }; //VER ESTO SI ESTA OK ??
-                art.Categoria = (Categoria)cbCategoria.SelectedItem;
-                art.Marca = (Marca)cbMarca.SelectedItem;
-
-                artNegocio.crear(art);
-                int idArticulo = artNegocio.obtenerUltimoId();
-                if (idArticulo > 0) 
+                if (articulo == null) 
                 {
-                    artNegocio.agregarImagen(idArticulo, art.Imagen.imgUrl);
+                    articulo = new Articulo();
                 }
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Precio = int.Parse(txtPrecio.Text);
+                articulo.Imagen = new Imagen { imgUrl = txtUrl.Text }; //VER ESTO SI ESTA OK ??
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
 
-                MessageBox.Show("Agregado con Exito!");
+                if (articulo.ID != 0)
+                {
+                    artMod.modificar(articulo);
+                    artMod.modificarImagen(articulo);
+                    MessageBox.Show("Articulo Modificado con Exito!");
+                }
+                else
+                {
+                    artNegocio.crear(articulo);
+                    int idArticulo = artNegocio.obtenerUltimoId();
+                    if (idArticulo > 0)
+                    {
+                        artNegocio.agregarImagen(idArticulo, articulo.Imagen.imgUrl);
+                    }
+                    MessageBox.Show("Articulo Agregado con Exito!");
+                }
             }
             catch (Exception ex)
             {
@@ -57,7 +77,24 @@ namespace CRUD
             try
             {
                 cbCategoria.DataSource = catNegocio.listar();
+                cbCategoria.ValueMember = "Id";
+                cbCategoria.DisplayMember = "Descripcion";
                 cbMarca.DataSource = marNegocio.listar();
+                cbMarca.ValueMember = "Id";
+                cbMarca.DisplayMember = "Descripcion";
+
+                if (articulo != null)
+                {
+                    txtId.Text = articulo.ID.ToString();
+                    txtCodigo.Text = articulo.Codigo.ToString();
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    cbCategoria.SelectedValue = articulo.Categoria.Id;
+                    cbMarca.SelectedValue = articulo.Marca.Id;
+                    txtUrl.Text = articulo.Imagen.imgUrl;
+                    cargarImagen(articulo.Imagen.imgUrl);
+                }
             }
             catch (Exception ex )
             {

@@ -20,7 +20,7 @@ namespace Negocio
             try
             {
                 //Consulta a la DB ¬
-                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Descripcion AS Categoria, M.Descripcion AS Marca, I.ImagenUrl AS Imagen FROM ARTICULOS A LEFT JOIN IMAGENES I ON I.IdArticulo = A.Id LEFT JOIN CATEGORIAS C ON C.Id = A.IdCategoria LEFT JOIN MARCAS M ON M.Id = A.IdMarca");
+                datos.setConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, C.Id AS CatId, C.Descripcion AS Categoria, M.Id AS MarId, M.Descripcion AS Marca, I.ImagenUrl AS Imagen FROM ARTICULOS A LEFT JOIN IMAGENES I ON I.IdArticulo = A.Id LEFT JOIN CATEGORIAS C ON C.Id = A.IdCategoria LEFT JOIN MARCAS M ON M.Id = A.IdMarca");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -34,9 +34,13 @@ namespace Negocio
                     art.Precio = datos.Lector["Precio"] is DBNull ? 0000 : (decimal)datos.Lector["Precio"];
                     //Categoria
                     art.Categoria = new Categoria();
+                    //art.Categoria.Id = (int)datos.Lector["CatId"];
+                    art.Categoria.Id = datos.Lector["CatId"] is DBNull ? 000 : (int)datos.Lector["CatId"];
                     art.Categoria.Descripcion = datos.Lector["Categoria"] is DBNull ? "Sin Categoria" : (string)datos.Lector["Categoria"];
                     //Marca
                     art.Marca = new Marca();
+                    //art.Marca.Id = (int)datos.Lector["MarId"];
+                    art.Marca.Id = datos.Lector["MarId"] is DBNull ? 000 : (int)datos.Lector["MarId"];
                     art.Marca.Descripcion = datos.Lector["Marca"] is DBNull ? "Sin Marca" : (string)datos.Lector["Marca"];
                     //Imagen
                     art.Imagen = new Imagen();
