@@ -35,14 +35,6 @@ namespace CRUD
             ventana.Show();
         }
 
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAgregar ventana = new frmAgregar();
-            ventana.MdiParent = this;
-            ventana.Dock = DockStyle.Fill;
-            ventana.Show();
-        }
-
         private void busquedaAvanzadaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVerTodos ventana = new frmVerTodos();
@@ -51,12 +43,28 @@ namespace CRUD
             ventana.Show();
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                frmEliminar ventana = new frmEliminar();
-                ventana.MdiParent = this;
-                ventana.Dock = DockStyle.Fill;
-                ventana.Show();
+            frmAgregar ventana = new frmAgregar();
+            ventana.MdiParent = this;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
+
+        private void eliminarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEliminar ventana = new frmEliminar();
+            ventana.MdiParent = this;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
+
+        private void agregarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarMarca ventana = new frmAgregarMarca();
+            ventana.MdiParent = this;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
         }
     }
 }

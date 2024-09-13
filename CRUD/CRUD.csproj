@@ -52,6 +52,12 @@
     <Compile Include="frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarMarca.Designer.cs">
+      <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarMarca.resx">
+      <DependentUpon>frmAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>
