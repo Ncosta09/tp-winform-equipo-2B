@@ -118,23 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBusquedaAvanzada.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACrSURBVDhPzZE9
-        CsJAEEb3Aip4HlGx1kLEGwVP5c8NrMVSG23VA/jebhphN5E0+uDBbMhkZr+Ev2SBB3zV7nGOX7HBC66w
-        V7vEE1bYiJNtHsbTJz67YuMmru3kEmvcpTLPE125RB8fqczT9oEB+k4R0zawEl5vm8o8BmTapRDPOI6n
-        BvxVpm1g3lmdbLPrT7EVNzFtG9S1nWzzHSfYmRHecBZPHXGDYyp/Twhv09ggo/FO6XoAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="BtnModificarArticulo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAJZJREFUOE/V0LEJAkEURdEfKJYhaKS5LZjagZmwi4H9CLslGNmGJQhqYgMmJuK9
-        I8Y7kyzsgxPMwPv8mRhUtnjijrUXJanxxgIrOCQ7lm8444Ql3CQr//IMYzjETXxOZ3awPE+niCmu2KdT
-        RwZa3uCDQzr9Ps5hfmRWjmjwgEOKyuaCCi3cpKg8wQsOcROfU5QRHNJ3Ir7hjCRvF7FxhAAAAABJRU5E
-        rkJggg==
+        bQAAAG0BjlwfygAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADbSURBVDhPpVNJ
+        DoMwDHS/gTlx4H38oH0EP6l6B35CU3HvBY6uJySQIFJVTaRBxp6ZxFlIRCK8mOuxLG+G+f5kngDEyKF2
+        5O8/RJeRuVHBrJAEZnDAjQ1W8eNEcApwvYk1cDOfklOwK4EB+tLEtmxT1/JuWzFVtZER25zWfE4xQ0vY
+        nCBpiRhL11khgBgDtZBriuJKbrf3ZCBYhkGWvl9jZxhxVUsa4KjiAkxU7AdMjmKHKW3gZsaAWdLgawtq
+        4leSbCF7E7OPUY3zLhI+2Vc5MPnzMQVAX78/Z6EPq3ZNfUe/IpQAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

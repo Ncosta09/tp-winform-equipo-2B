@@ -118,6 +118,26 @@ namespace CRUD
             frmModificar modificarArticulo = new frmModificar(seleccionado);
             modificarArticulo.ShowDialog();
         }
+
+        private void dgvArticulos_DoubleClick(object sender, EventArgs e)
+        
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(frmVerDetalle))
+
+                    return;
+            }
+
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmVerDetalle verArticulo = new frmVerDetalle(seleccionado);
+
+            verArticulo.MdiParent = this.MdiParent; 
+            verArticulo.Dock = DockStyle.Fill; 
+            verArticulo.Show(); 
+
+        }
     }
     }
 

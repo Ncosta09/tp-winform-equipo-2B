@@ -57,6 +57,7 @@
             this.dgvArticulos.Size = new System.Drawing.Size(636, 317);
             this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
+            this.dgvArticulos.DoubleClick += new System.EventHandler(this.dgvArticulos_DoubleClick);
             // 
             // pbArticulo
             // 
