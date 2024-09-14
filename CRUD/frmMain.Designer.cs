@@ -52,8 +52,8 @@
             this.verToolStripMenuItem,
             this.buscarToolStripMenuItem,
             this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
+            this.eliminarToolStripMenuItem,
+            this.modificarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -124,6 +124,7 @@
             // 
             // modificarToolStripMenuItem
             // 
+            this.modificarToolStripMenuItem.Enabled = false;
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.modificarToolStripMenuItem.Text = "&Modificar";

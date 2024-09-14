@@ -29,7 +29,10 @@ namespace CRUD
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
                 dgvArticulos.Columns["Imagen"].Visible = false;
-                //dgvArticulos.Columns["Id"].Visible = false;
+                dgvArticulos.Columns["Descripcion"].Visible = false; 
+                dgvArticulos.Columns["Categoria"].Visible = false;
+                dgvArticulos.Columns["Marca"].Visible = false;
+                //dgvArticulos.Columns["Id"].Visible = false; > VER PORQUE NO ME DEJA OCULTARLO QUE QUEDE SOLO CODIGO, NOMBRE Y PRECIO
                 //pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)

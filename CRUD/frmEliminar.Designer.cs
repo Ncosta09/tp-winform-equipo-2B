@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEliminar));
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pboxImagenArticulo = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -55,11 +56,14 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(389, 421);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(206, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(80, 28);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
