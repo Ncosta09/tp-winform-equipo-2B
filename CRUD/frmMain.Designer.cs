@@ -41,6 +41,7 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +102,8 @@
             // 
             this.agregarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarArticuloToolStripMenuItem,
-            this.agregarMarcaToolStripMenuItem});
+            this.agregarMarcaToolStripMenuItem,
+            this.agregarCategoriaToolStripMenuItem});
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
             this.agregarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.agregarToolStripMenuItem.Text = "&Agregar";
@@ -109,14 +111,14 @@
             // agregarArticuloToolStripMenuItem
             // 
             this.agregarArticuloToolStripMenuItem.Name = "agregarArticuloToolStripMenuItem";
-            this.agregarArticuloToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.agregarArticuloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarArticuloToolStripMenuItem.Text = "Agregar Articulo";
             this.agregarArticuloToolStripMenuItem.Click += new System.EventHandler(this.agregarArticuloToolStripMenuItem_Click);
             // 
             // agregarMarcaToolStripMenuItem
             // 
             this.agregarMarcaToolStripMenuItem.Name = "agregarMarcaToolStripMenuItem";
-            this.agregarMarcaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.agregarMarcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarMarcaToolStripMenuItem.Text = "Agregar Marca";
             this.agregarMarcaToolStripMenuItem.Click += new System.EventHandler(this.agregarMarcaToolStripMenuItem_Click);
             // 
@@ -138,16 +140,23 @@
             // eliminarArticuloToolStripMenuItem
             // 
             this.eliminarArticuloToolStripMenuItem.Name = "eliminarArticuloToolStripMenuItem";
-            this.eliminarArticuloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarArticuloToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.eliminarArticuloToolStripMenuItem.Text = "Eliminar Articulo";
             this.eliminarArticuloToolStripMenuItem.Click += new System.EventHandler(this.eliminarArticuloToolStripMenuItem_Click);
             // 
             // eliminarMarcaToolStripMenuItem
             // 
             this.eliminarMarcaToolStripMenuItem.Name = "eliminarMarcaToolStripMenuItem";
-            this.eliminarMarcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarMarcaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.eliminarMarcaToolStripMenuItem.Text = "Eliminar Marca";
             this.eliminarMarcaToolStripMenuItem.Click += new System.EventHandler(this.eliminarMarcaToolStripMenuItem_Click);
+            // 
+            // agregarCategoriaToolStripMenuItem
+            // 
+            this.agregarCategoriaToolStripMenuItem.Name = "agregarCategoriaToolStripMenuItem";
+            this.agregarCategoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarCategoriaToolStripMenuItem.Text = "Agregar Categoria";
+            this.agregarCategoriaToolStripMenuItem.Click += new System.EventHandler(this.agregarCategoriaToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -156,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(962, 531);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
@@ -183,6 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem agregarMarcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarArticuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarMarcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarCategoriaToolStripMenuItem;
     }
 }
 

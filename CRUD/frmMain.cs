@@ -74,5 +74,13 @@ namespace CRUD
             ventana.Dock = DockStyle.Fill;
             ventana.Show();
         }
+
+        private void agregarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategoria ventana = new frmAgregarCategoria();
+            ventana.MdiParent = this;
+            ventana.Dock = DockStyle.Fill;
+            ventana.Show();
+        }
     }
 }

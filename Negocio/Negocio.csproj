@@ -47,6 +47,7 @@
     <Compile Include="CrearArticuloNegocio.cs" />
     <Compile Include="CategoriaNegocio.cs" />
     <Compile Include="CrearCaracteristica.cs" />
+    <Compile Include="CrearCategoria.cs" />
     <Compile Include="EliminarArticuloNegocio.cs" />
     <Compile Include="EliminarMarcaNegocio.cs" />
     <Compile Include="ImagenNegocio.cs" />

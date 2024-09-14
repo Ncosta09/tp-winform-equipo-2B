@@ -41,7 +41,7 @@ namespace CRUD
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
-                articulo.Precio = int.Parse(txtPrecio.Text);
+                articulo.Precio = Decimal.Parse(txtPrecio.Text);
                 articulo.Imagen = new Imagen { imgUrl = txtUrl.Text }; //VER ESTO SI ESTA OK ??
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
@@ -88,7 +88,7 @@ namespace CRUD
                     txtId.Text = articulo.ID.ToString();
                     txtCodigo.Text = articulo.Codigo.ToString();
                     txtNombre.Text = articulo.Nombre;
-                    txtDescripcion.Text = articulo.Descripcion;
+                    txtDescripcion.Text = articulo.Descripcion;   
                     txtPrecio.Text = articulo.Precio.ToString();
                     cbCategoria.SelectedValue = articulo.Categoria.Id;
                     cbMarca.SelectedValue = articulo.Marca.Id;
@@ -126,5 +126,9 @@ namespace CRUD
                 e.Handled = true;
         }
 
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
