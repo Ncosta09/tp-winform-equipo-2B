@@ -27,7 +27,11 @@ namespace CRUD
             {
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
+                dgvArticulos.Columns["Id"].Visible = false;
                 dgvArticulos.Columns["Imagen"].Visible = false;
+                dgvArticulos.Columns["Descripcion"].Visible = false;
+                dgvArticulos.Columns["Categoria"].Visible = false;
+                dgvArticulos.Columns["Marca"].Visible = false;
                 //pboxImagenArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)
@@ -43,8 +47,11 @@ namespace CRUD
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccion.Imagen.imgUrl);
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.Imagen.imgUrl);
+            }
         }
 
         private void cargarImagen(string imagen)

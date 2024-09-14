@@ -46,10 +46,9 @@
             // 
             this.lblMarcasViejas.AutoSize = true;
             this.lblMarcasViejas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblMarcasViejas.Location = new System.Drawing.Point(496, 138);
-            this.lblMarcasViejas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMarcasViejas.Location = new System.Drawing.Point(661, 170);
             this.lblMarcasViejas.Name = "lblMarcasViejas";
-            this.lblMarcasViejas.Size = new System.Drawing.Size(53, 15);
+            this.lblMarcasViejas.Size = new System.Drawing.Size(63, 18);
             this.lblMarcasViejas.TabIndex = 10;
             this.lblMarcasViejas.Text = "Marcas:";
             // 
@@ -57,13 +56,14 @@
             // 
             this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(499, 155);
-            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvMarcas.Location = new System.Drawing.Point(665, 191);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 51;
             this.dgvMarcas.RowTemplate.Height = 24;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(338, 184);
+            this.dgvMarcas.Size = new System.Drawing.Size(451, 226);
             this.dgvMarcas.TabIndex = 9;
             this.dgvMarcas.Click += new System.EventHandler(this.dgvMarcas_Click);
             // 
@@ -71,32 +71,32 @@
             // 
             this.pnlDeco.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlDeco.Controls.Add(this.pnlMarca);
-            this.pnlDeco.Controls.Add(this.btnEliminar);
-            this.pnlDeco.Location = new System.Drawing.Point(34, -1);
-            this.pnlDeco.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlDeco.Location = new System.Drawing.Point(45, -1);
+            this.pnlDeco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDeco.Name = "pnlDeco";
-            this.pnlDeco.Size = new System.Drawing.Size(372, 505);
+            this.pnlDeco.Size = new System.Drawing.Size(496, 622);
             this.pnlDeco.TabIndex = 8;
             // 
             // pnlMarca
             // 
             this.pnlMarca.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pnlMarca.Controls.Add(this.tbxEliminarMarca);
+            this.pnlMarca.Controls.Add(this.btnEliminar);
             this.pnlMarca.Controls.Add(this.label1);
-            this.pnlMarca.Location = new System.Drawing.Point(82, 156);
-            this.pnlMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlMarca.Location = new System.Drawing.Point(109, 192);
+            this.pnlMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMarca.Name = "pnlMarca";
-            this.pnlMarca.Size = new System.Drawing.Size(199, 144);
+            this.pnlMarca.Size = new System.Drawing.Size(265, 177);
             this.pnlMarca.TabIndex = 0;
             // 
             // tbxEliminarMarca
             // 
             this.tbxEliminarMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxEliminarMarca.Location = new System.Drawing.Point(10, 39);
-            this.tbxEliminarMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEliminarMarca.Location = new System.Drawing.Point(13, 48);
+            this.tbxEliminarMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxEliminarMarca.Name = "tbxEliminarMarca";
             this.tbxEliminarMarca.ReadOnly = true;
-            this.tbxEliminarMarca.Size = new System.Drawing.Size(176, 20);
+            this.tbxEliminarMarca.Size = new System.Drawing.Size(233, 22);
             this.tbxEliminarMarca.TabIndex = 2;
             // 
             // label1
@@ -104,10 +104,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Marca:";
             // 
@@ -118,10 +117,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Arial", 7.8F);
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(145, 319);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(76, 136);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(80, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(107, 34);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -132,23 +131,23 @@
             // 
             this.lblEliminarMarca.AutoSize = true;
             this.lblEliminarMarca.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
-            this.lblEliminarMarca.Location = new System.Drawing.Point(791, 7);
-            this.lblEliminarMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEliminarMarca.Location = new System.Drawing.Point(1055, 9);
             this.lblEliminarMarca.Name = "lblEliminarMarca";
-            this.lblEliminarMarca.Size = new System.Drawing.Size(150, 24);
+            this.lblEliminarMarca.Size = new System.Drawing.Size(191, 30);
             this.lblEliminarMarca.TabIndex = 7;
             this.lblEliminarMarca.Text = "Eliminar Marca";
             // 
             // frmEliminarMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 502);
+            this.ClientSize = new System.Drawing.Size(1277, 618);
             this.Controls.Add(this.lblMarcasViejas);
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.pnlDeco);
             this.Controls.Add(this.lblEliminarMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEliminarMarca";
             this.Text = "frmEliminarMarca";
             this.Load += new System.EventHandler(this.frmEliminarMarca_Load);

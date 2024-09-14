@@ -21,30 +21,46 @@ namespace CRUD
             InitializeComponent();
         }
 
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
+            dgvArticulos.Columns["Categoria"].Visible = false;
+            dgvArticulos.Columns["Marca"].Visible = false;
+        }
+
         private void frmVerTodos_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
+
             try
             {
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
-                dgvArticulos.Columns["Imagen"].Visible = false;
-                dgvArticulos.Columns["Descripcion"].Visible = false; 
-                dgvArticulos.Columns["Categoria"].Visible = false;
-                dgvArticulos.Columns["Marca"].Visible = false;
-                //dgvArticulos.Columns["Id"].Visible = false; > VER PORQUE NO ME DEJA OCULTARLO QUE QUEDE SOLO CODIGO, NOMBRE Y PRECIO
+                ocultarColumnas();
                 //pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            comboBoxCampo.Items.Add("Nombre");
+            comboBoxCampo.Items.Add("Codigo");
+            //comboBoxCampo.Items.Add("Descripcion");
+            //comboBoxCampo.Items.Add("Categoria");
+            //comboBoxCampo.Items.Add("Marca");
+            comboBoxCampo.Items.Add("Precio");
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccion.Imagen.imgUrl);
+            if(dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.Imagen.imgUrl);
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -62,6 +78,7 @@ namespace CRUD
         private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = comboBoxCampo.SelectedItem.ToString();
+
             if (opcion == "Precio")
             {
                 comboBoxCriterio.Items.Clear();
@@ -99,8 +116,11 @@ namespace CRUD
                 string campo = comboBoxCampo.SelectedItem.ToString();
                 string criterio = comboBoxCriterio.SelectedItem.ToString();
                 string filtro = textBoxFiltroAvanzado.Text;
+
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = busqueda.filtrar(campo, criterio, filtro);
+                ocultarColumnas();
+
             }
             catch (Exception ex)
             {

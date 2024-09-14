@@ -141,6 +141,7 @@ namespace Negocio
                     default:
                         break;
                 }
+
                 datos.setConsulta(consulta);
                 datos.ejecutarLectura();
 
@@ -170,7 +171,6 @@ namespace Negocio
                     lista.Add(articulo);
 
                 }
-
 
                 return lista;
             }

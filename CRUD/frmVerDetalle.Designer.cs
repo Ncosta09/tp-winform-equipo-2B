@@ -53,38 +53,47 @@
             // 
             this.lblVerDetalle.AutoSize = true;
             this.lblVerDetalle.BackColor = System.Drawing.SystemColors.Control;
-            this.lblVerDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerDetalle.Location = new System.Drawing.Point(13, 10);
+            this.lblVerDetalle.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.lblVerDetalle.Location = new System.Drawing.Point(1070, 9);
+            this.lblVerDetalle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVerDetalle.Name = "lblVerDetalle";
-            this.lblVerDetalle.Size = new System.Drawing.Size(138, 16);
+            this.lblVerDetalle.Size = new System.Drawing.Size(194, 30);
             this.lblVerDetalle.TabIndex = 82;
-            this.lblVerDetalle.Text = "Ver detalle articulo";
+            this.lblVerDetalle.Text = "Detalle Articulo";
             // 
             // tbxNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(105, 115);
+            this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxNombre.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxNombre.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxNombre.Location = new System.Drawing.Point(147, 86);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(247, 20);
+            this.tbxNombre.Size = new System.Drawing.Size(328, 22);
             this.tbxNombre.TabIndex = 81;
             // 
             // buttonCerrar
             // 
+            this.buttonCerrar.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrar.Font = new System.Drawing.Font("Arial", 7.8F);
             this.buttonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCerrar.Image")));
             this.buttonCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCerrar.Location = new System.Drawing.Point(842, 437);
+            this.buttonCerrar.Location = new System.Drawing.Point(1157, 571);
+            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(82, 40);
+            this.buttonCerrar.Size = new System.Drawing.Size(107, 34);
             this.buttonCerrar.TabIndex = 80;
             this.buttonCerrar.Text = "Cerrar";
-            this.buttonCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCerrar.UseVisualStyleBackColor = true;
+            this.buttonCerrar.UseVisualStyleBackColor = false;
             this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(476, 61);
+            this.pbxArticulo.Location = new System.Drawing.Point(713, 75);
+            this.pbxArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(365, 365);
+            this.pbxArticulo.Size = new System.Drawing.Size(420, 420);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 78;
             this.pbxArticulo.TabStop = false;
@@ -92,104 +101,129 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(20, 247);
+            this.lblDescripcion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcion.Location = new System.Drawing.Point(42, 377);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(80, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(97, 18);
             this.lblDescripcion.TabIndex = 77;
-            this.lblDescripcion.Text = "descripcion:";
+            this.lblDescripcion.Text = "Descripcion:";
             // 
             // tbxDescripcion
             // 
-            this.tbxDescripcion.Location = new System.Drawing.Point(105, 246);
+            this.tbxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxDescripcion.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxDescripcion.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxDescripcion.Location = new System.Drawing.Point(147, 376);
+            this.tbxDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDescripcion.Multiline = true;
             this.tbxDescripcion.Name = "tbxDescripcion";
-            this.tbxDescripcion.Size = new System.Drawing.Size(247, 87);
+            this.tbxDescripcion.Size = new System.Drawing.Size(328, 106);
             this.tbxDescripcion.TabIndex = 76;
             // 
             // tbxPrecio
             // 
-            this.tbxPrecio.Location = new System.Drawing.Point(105, 220);
+            this.tbxPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxPrecio.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxPrecio.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxPrecio.Location = new System.Drawing.Point(147, 318);
+            this.tbxPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPrecio.Name = "tbxPrecio";
-            this.tbxPrecio.Size = new System.Drawing.Size(247, 20);
+            this.tbxPrecio.Size = new System.Drawing.Size(328, 22);
             this.tbxPrecio.TabIndex = 75;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(20, 221);
+            this.lblPrecio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.Location = new System.Drawing.Point(42, 319);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(48, 16);
+            this.lblPrecio.Size = new System.Drawing.Size(58, 18);
             this.lblPrecio.TabIndex = 74;
-            this.lblPrecio.Text = "precio:";
+            this.lblPrecio.Text = "Precio:";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(20, 195);
+            this.lblCategoria.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCategoria.Location = new System.Drawing.Point(42, 261);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(67, 16);
+            this.lblCategoria.Size = new System.Drawing.Size(81, 18);
             this.lblCategoria.TabIndex = 72;
-            this.lblCategoria.Text = "categoria:";
+            this.lblCategoria.Text = "Categoria:";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(20, 168);
+            this.lblMarca.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblMarca.Location = new System.Drawing.Point(42, 203);
+            this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(48, 16);
+            this.lblMarca.Size = new System.Drawing.Size(55, 18);
             this.lblMarca.TabIndex = 71;
-            this.lblMarca.Text = "marca:";
+            this.lblMarca.Text = "Marca:";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(20, 142);
+            this.lblCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCodigo.Location = new System.Drawing.Point(42, 145);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(52, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(63, 18);
             this.lblCodigo.TabIndex = 70;
-            this.lblCodigo.Text = "codigo:";
+            this.lblCodigo.Text = "Codigo:";
             // 
             // tbxCodigo
             // 
-            this.tbxCodigo.Location = new System.Drawing.Point(105, 141);
+            this.tbxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxCodigo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxCodigo.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxCodigo.Location = new System.Drawing.Point(147, 144);
+            this.tbxCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCodigo.Name = "tbxCodigo";
-            this.tbxCodigo.Size = new System.Drawing.Size(247, 20);
+            this.tbxCodigo.Size = new System.Drawing.Size(328, 22);
             this.tbxCodigo.TabIndex = 67;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(20, 116);
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Location = new System.Drawing.Point(42, 87);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(68, 18);
             this.lblNombre.TabIndex = 65;
-            this.lblNombre.Text = "nombre:";
+            this.lblNombre.Text = "Nombre:";
             // 
             // tbxMarca
             // 
-            this.tbxMarca.Location = new System.Drawing.Point(105, 168);
+            this.tbxMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxMarca.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxMarca.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxMarca.Location = new System.Drawing.Point(147, 202);
+            this.tbxMarca.Margin = new System.Windows.Forms.Padding(4);
             this.tbxMarca.Name = "tbxMarca";
-            this.tbxMarca.Size = new System.Drawing.Size(247, 20);
+            this.tbxMarca.Size = new System.Drawing.Size(328, 22);
             this.tbxMarca.TabIndex = 83;
             // 
             // tbxCategoria
             // 
-            this.tbxCategoria.Location = new System.Drawing.Point(105, 195);
+            this.tbxCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxCategoria.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tbxCategoria.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.tbxCategoria.Location = new System.Drawing.Point(147, 260);
+            this.tbxCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCategoria.Name = "tbxCategoria";
-            this.tbxCategoria.Size = new System.Drawing.Size(247, 20);
+            this.tbxCategoria.Size = new System.Drawing.Size(328, 22);
             this.tbxCategoria.TabIndex = 84;
             // 
             // pnlDeco
             // 
             this.pnlDeco.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlDeco.Controls.Add(this.lblMarca);
-            this.pnlDeco.Controls.Add(this.lblVerDetalle);
             this.pnlDeco.Controls.Add(this.tbxCategoria);
             this.pnlDeco.Controls.Add(this.lblNombre);
             this.pnlDeco.Controls.Add(this.tbxMarca);
@@ -201,21 +235,23 @@
             this.pnlDeco.Controls.Add(this.tbxPrecio);
             this.pnlDeco.Controls.Add(this.lblDescripcion);
             this.pnlDeco.Controls.Add(this.tbxDescripcion);
-            this.pnlDeco.Location = new System.Drawing.Point(62, 0);
-            this.pnlDeco.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlDeco.Location = new System.Drawing.Point(83, 0);
+            this.pnlDeco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDeco.Name = "pnlDeco";
-            this.pnlDeco.Size = new System.Drawing.Size(372, 505);
+            this.pnlDeco.Size = new System.Drawing.Size(496, 622);
             this.pnlDeco.TabIndex = 85;
             // 
             // frmVerDetalle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 502);
+            this.ClientSize = new System.Drawing.Size(1277, 618);
             this.Controls.Add(this.pnlDeco);
+            this.Controls.Add(this.lblVerDetalle);
             this.Controls.Add(this.buttonCerrar);
             this.Controls.Add(this.pbxArticulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVerDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVerDetalle";
@@ -224,6 +260,7 @@
             this.pnlDeco.ResumeLayout(false);
             this.pnlDeco.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
