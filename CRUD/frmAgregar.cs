@@ -62,6 +62,8 @@ namespace CRUD
                     }
                     MessageBox.Show("Articulo Agregado con Exito!");
                 }
+
+                this.Close();
             }
             catch (Exception ex)
             {

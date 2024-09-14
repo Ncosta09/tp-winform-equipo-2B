@@ -78,20 +78,21 @@ namespace CRUD
             }
 
         }
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        
+        /*private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada = new List<Articulo>();
             String filtro = comboBoxCampo.Text;
             listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
-        }
+        }*/
 
 
         private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
             List<Articulo> listaFiltrada = new List<Articulo>();
-            ArticuloNegocio negocio = new ArticuloNegocio();
+            BusquedaAvanzada busqueda = new BusquedaAvanzada();
 
             try
             {
@@ -99,7 +100,7 @@ namespace CRUD
                 string criterio = comboBoxCriterio.SelectedItem.ToString();
                 string filtro = textBoxFiltroAvanzado.Text;
                 dgvArticulos.DataSource = null;
-                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+                dgvArticulos.DataSource = busqueda.filtrar(campo, criterio, filtro);
             }
             catch (Exception ex)
             {
