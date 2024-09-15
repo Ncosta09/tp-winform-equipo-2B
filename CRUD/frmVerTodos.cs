@@ -44,6 +44,7 @@ namespace CRUD
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulo;
+                ocultarColumnas();
                 //pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)
@@ -197,9 +198,10 @@ namespace CRUD
             seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             frmAgregar modificarArticulo = new frmAgregar(seleccionado);
 
+
             modificarArticulo.FormClosed += (s, args) =>
             {
-                // Recargar los datos después de cerrar el formulario de modificación
+                //ACTUALIZA LOS DATOS DESPUES DE CERRAR EL FORMULARIO DE MODIFICAR
                 cargar();
             };
 
