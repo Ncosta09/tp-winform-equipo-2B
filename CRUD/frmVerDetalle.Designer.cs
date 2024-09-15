@@ -43,8 +43,8 @@
             this.tbxMarca = new System.Windows.Forms.TextBox();
             this.tbxCategoria = new System.Windows.Forms.TextBox();
             this.pnlDeco = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDerecha = new System.Windows.Forms.Button();
+            this.btzIzquierda = new System.Windows.Forms.Button();
             this.buttonCerrar = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.pnlDeco.SuspendLayout();
@@ -199,33 +199,34 @@
             this.pnlDeco.Controls.Add(this.lblDescripcion);
             this.pnlDeco.Controls.Add(this.tbxDescripcion);
             this.pnlDeco.Location = new System.Drawing.Point(62, 0);
-            this.pnlDeco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlDeco.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDeco.Name = "pnlDeco";
             this.pnlDeco.Size = new System.Drawing.Size(372, 505);
             this.pnlDeco.TabIndex = 85;
             // 
-            // button2
+            // btnDerecha
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Window;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::CRUD.Properties.Resources.icons8_delante16;
-            this.button2.Location = new System.Drawing.Point(708, 408);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 23);
-            this.button2.TabIndex = 87;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDerecha.BackColor = System.Drawing.SystemColors.Window;
+            this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDerecha.Image = global::CRUD.Properties.Resources.icons8_delante16;
+            this.btnDerecha.Location = new System.Drawing.Point(708, 408);
+            this.btnDerecha.Name = "btnDerecha";
+            this.btnDerecha.Size = new System.Drawing.Size(50, 23);
+            this.btnDerecha.TabIndex = 87;
+            this.btnDerecha.UseVisualStyleBackColor = false;
+            this.btnDerecha.Click += new System.EventHandler(this.btnDerecha_Click);
             // 
-            // button1
+            // btzIzquierda
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CRUD.Properties.Resources.icons8_atrás_16;
-            this.button1.Location = new System.Drawing.Point(627, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
-            this.button1.TabIndex = 86;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btzIzquierda.BackColor = System.Drawing.SystemColors.Window;
+            this.btzIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btzIzquierda.Image = global::CRUD.Properties.Resources.icons8_atrás_16;
+            this.btzIzquierda.Location = new System.Drawing.Point(627, 408);
+            this.btzIzquierda.Name = "btzIzquierda";
+            this.btzIzquierda.Size = new System.Drawing.Size(50, 23);
+            this.btzIzquierda.TabIndex = 86;
+            this.btzIzquierda.UseVisualStyleBackColor = false;
+            this.btzIzquierda.Click += new System.EventHandler(this.btzIzquierda_Click);
             // 
             // buttonCerrar
             // 
@@ -256,8 +257,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 502);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDerecha);
+            this.Controls.Add(this.btzIzquierda);
             this.Controls.Add(this.pnlDeco);
             this.Controls.Add(this.lblVerDetalle);
             this.Controls.Add(this.buttonCerrar);
@@ -293,7 +294,7 @@
         private System.Windows.Forms.TextBox tbxMarca;
         private System.Windows.Forms.TextBox tbxCategoria;
         private System.Windows.Forms.Panel pnlDeco;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btzIzquierda;
+        private System.Windows.Forms.Button btnDerecha;
     }
 }

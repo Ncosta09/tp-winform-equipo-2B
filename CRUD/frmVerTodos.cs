@@ -32,13 +32,18 @@ namespace CRUD
 
         private void frmVerTodos_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar()
+        {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
                 listaArticulo = negocio.listar();
+                dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulo;
-                ocultarColumnas();
                 //pbArticulo.Load(listaArticulo[0].Imagen.imgUrl);
             }
             catch (Exception ex)
@@ -191,6 +196,12 @@ namespace CRUD
             Articulo seleccionado;
             seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             frmAgregar modificarArticulo = new frmAgregar(seleccionado);
+
+            modificarArticulo.FormClosed += (s, args) =>
+            {
+                // Recargar los datos después de cerrar el formulario de modificación
+                cargar();
+            };
 
             modificarArticulo.MdiParent = this.MdiParent;
             modificarArticulo.Dock = DockStyle.Fill;
