@@ -167,6 +167,7 @@
     <Content Include="Resources\icons8-atrás-16.png" />
     <Content Include="Resources\icons8-atrás-161.png" />
     <Content Include="Resources\icons8-atrás-64.png" />
+    <None Include="Resources\icons8-delante16.png" />
     <Content Include="Resources\icons8-modificar-16.png" />
     <Content Include="Resources\imagen-de-prueba-320x240-1.jpeg" />
     <Content Include="Resources\list.png" />

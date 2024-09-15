@@ -47,10 +47,14 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.pbArticuloPreview = new System.Windows.Forms.PictureBox();
+            this.lbImagenesAgregar = new System.Windows.Forms.ListBox();
             this.lblPreview = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.pbArticuloPreview = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticuloPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +64,7 @@
             this.lblId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblId.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblId.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(147, 94);
+            this.lblId.Location = new System.Drawing.Point(147, 62);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(27, 18);
             this.lblId.TabIndex = 1;
@@ -72,7 +76,7 @@
             this.lblCodigo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblCodigo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCodigo.Location = new System.Drawing.Point(147, 149);
+            this.lblCodigo.Location = new System.Drawing.Point(147, 117);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(63, 18);
             this.lblCodigo.TabIndex = 3;
@@ -84,7 +88,7 @@
             this.lblNombre.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNombre.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Location = new System.Drawing.Point(147, 206);
+            this.lblNombre.Location = new System.Drawing.Point(147, 174);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(68, 18);
             this.lblNombre.TabIndex = 5;
@@ -96,7 +100,7 @@
             this.lblDescripcion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDescripcion.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblDescripcion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcion.Location = new System.Drawing.Point(147, 261);
+            this.lblDescripcion.Location = new System.Drawing.Point(147, 229);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(97, 18);
             this.lblDescripcion.TabIndex = 7;
@@ -108,7 +112,7 @@
             this.lblPrecio.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblPrecio.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPrecio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPrecio.Location = new System.Drawing.Point(147, 318);
+            this.lblPrecio.Location = new System.Drawing.Point(147, 286);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(58, 18);
             this.lblPrecio.TabIndex = 9;
@@ -120,7 +124,7 @@
             this.lblCategoria.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblCategoria.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCategoria.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCategoria.Location = new System.Drawing.Point(147, 373);
+            this.lblCategoria.Location = new System.Drawing.Point(147, 341);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(81, 18);
             this.lblCategoria.TabIndex = 11;
@@ -132,7 +136,7 @@
             this.lblMarca.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblMarca.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblMarca.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblMarca.Location = new System.Drawing.Point(147, 430);
+            this.lblMarca.Location = new System.Drawing.Point(147, 398);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(55, 18);
             this.lblMarca.TabIndex = 13;
@@ -144,7 +148,7 @@
             this.lblImg.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblImg.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblImg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblImg.Location = new System.Drawing.Point(147, 485);
+            this.lblImg.Location = new System.Drawing.Point(147, 453);
             this.lblImg.Name = "lblImg";
             this.lblImg.Size = new System.Drawing.Size(88, 18);
             this.lblImg.TabIndex = 15;
@@ -166,7 +170,7 @@
             // 
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(251, 258);
+            this.txtDescripcion.Location = new System.Drawing.Point(251, 226);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(295, 22);
@@ -176,7 +180,7 @@
             // 
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigo.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(251, 146);
+            this.txtCodigo.Location = new System.Drawing.Point(251, 114);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(295, 22);
@@ -186,7 +190,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(251, 203);
+            this.txtNombre.Location = new System.Drawing.Point(251, 171);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(295, 22);
@@ -196,10 +200,10 @@
             // 
             this.txtUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUrl.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUrl.Location = new System.Drawing.Point(251, 482);
+            this.txtUrl.Location = new System.Drawing.Point(251, 450);
             this.txtUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(295, 22);
+            this.txtUrl.Size = new System.Drawing.Size(251, 22);
             this.txtUrl.TabIndex = 16;
             this.txtUrl.Leave += new System.EventHandler(this.txtUrl_Leave);
             // 
@@ -207,7 +211,7 @@
             // 
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(251, 315);
+            this.txtPrecio.Location = new System.Drawing.Point(251, 283);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(295, 22);
@@ -218,7 +222,7 @@
             // 
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(251, 91);
+            this.txtId.Location = new System.Drawing.Point(251, 59);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -230,7 +234,7 @@
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(251, 370);
+            this.cbCategoria.Location = new System.Drawing.Point(251, 338);
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(296, 24);
@@ -241,7 +245,7 @@
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(251, 427);
+            this.cbMarca.Location = new System.Drawing.Point(251, 395);
             this.cbMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(296, 24);
@@ -250,12 +254,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAgregarImagen);
+            this.panel1.Controls.Add(this.lbImagenesAgregar);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(119, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(496, 622);
             this.panel1.TabIndex = 17;
+            // 
+            // lbImagenesAgregar
+            // 
+            this.lbImagenesAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbImagenesAgregar.FormattingEnabled = true;
+            this.lbImagenesAgregar.ItemHeight = 16;
+            this.lbImagenesAgregar.Location = new System.Drawing.Point(132, 478);
+            this.lbImagenesAgregar.Name = "lbImagenesAgregar";
+            this.lbImagenesAgregar.Size = new System.Drawing.Size(251, 82);
+            this.lbImagenesAgregar.TabIndex = 0;
+            this.lbImagenesAgregar.SelectedIndexChanged += new System.EventHandler(this.lbImagenesAgregar_SelectedIndexChanged);
+            // 
+            // lblPreview
+            // 
+            this.lblPreview.AutoSize = true;
+            this.lblPreview.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPreview.Location = new System.Drawing.Point(763, 121);
+            this.lblPreview.Name = "lblPreview";
+            this.lblPreview.Size = new System.Drawing.Size(116, 18);
+            this.lblPreview.TabIndex = 19;
+            this.lblPreview.Text = "Preview Image:";
             // 
             // btnGuardar
             // 
@@ -277,6 +305,24 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(1044, 573);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(107, 34);
+            this.buttonCancelar.TabIndex = 63;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
             // pbArticuloPreview
             // 
             this.pbArticuloPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -288,33 +334,29 @@
             this.pbArticuloPreview.TabIndex = 18;
             this.pbArticuloPreview.TabStop = false;
             // 
-            // lblPreview
+            // button1
             // 
-            this.lblPreview.AutoSize = true;
-            this.lblPreview.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPreview.Location = new System.Drawing.Point(763, 121);
-            this.lblPreview.Name = "lblPreview";
-            this.lblPreview.Size = new System.Drawing.Size(116, 18);
-            this.lblPreview.TabIndex = 19;
-            this.lblPreview.Text = "Preview Image:";
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::CRUD.Properties.Resources.multiply;
+            this.button1.Location = new System.Drawing.Point(388, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 65;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonCancelar
+            // btnAgregarImagen
             // 
-            this.buttonCancelar.BackColor = System.Drawing.SystemColors.Window;
-            this.buttonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(1044, 573);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(107, 34);
-            this.buttonCancelar.TabIndex = 63;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.btnAgregarImagen.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAgregarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarImagen.Image = global::CRUD.Properties.Resources.plus;
+            this.btnAgregarImagen.Location = new System.Drawing.Point(389, 451);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregarImagen.TabIndex = 64;
+            this.btnAgregarImagen.UseVisualStyleBackColor = false;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // frmAgregar
             // 
@@ -349,6 +391,7 @@
             this.Name = "frmAgregar";
             this.Text = "frmAgregar";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbArticuloPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -379,5 +422,8 @@
         private System.Windows.Forms.PictureBox pbArticuloPreview;
         private System.Windows.Forms.Label lblPreview;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button btnAgregarImagen;
+        private System.Windows.Forms.ListBox lbImagenesAgregar;
+        private System.Windows.Forms.Button button1;
     }
 }

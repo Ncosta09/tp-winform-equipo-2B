@@ -38,15 +38,15 @@ namespace Negocio
 
         }
 
-        public void modificarImagen(Articulo idArticulo)
+        public void modificarImagen(int idArticulo, string imagenUrl)
         {
             AccesoDatos datos = new AccesoDatos();
             
             try
             {
-                datos.setConsulta("UPDATE IMAGENES SET ImagenUrl = @Url WHERE IdArticulo = @idArticulo");
-                datos.setParametro("@Url", idArticulo.Imagen.imgUrl);
-                datos.setParametro("@idArticulo", idArticulo.ID);
+                datos.setConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@idArticulo, @imagenUrl)");
+                datos.setParametro("@idArticulo", idArticulo);
+                datos.setParametro("@imagenUrl", imagenUrl);
 
                 datos.ejecutarAccion();
             }
@@ -61,5 +61,54 @@ namespace Negocio
             }
 
         }
+        public List<string> obtenerImagenesPorArticulo(int idArticulo)
+        {
+            List<string> imagenes = new List<string>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("SELECT ImagenUrl FROM IMAGENES WHERE IdArticulo = @idArticulo");
+                datos.setParametro("@idArticulo", idArticulo);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    imagenes.Add(datos.Lector["ImagenUrl"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return imagenes;
+        }
+
+        public void eliminarImagen(string imagenUrl)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsulta("DELETE FROM IMAGENES WHERE ImagenUrl = @imagenUrl");
+                //datos.setParametro("@idArticulo", idArticulo); //IdArticulo = @idArticulo AND
+                datos.setParametro("@imagenUrl", imagenUrl);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }

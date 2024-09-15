@@ -74,9 +74,10 @@ namespace CRUD
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
                 articulo.Precio = Decimal.Parse(txtPrecio.Text);
-                articulo.Imagen = new Imagen { imgUrl = txtUrl.Text }; //VER ESTO SI ESTA OK ??
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
+                //articulo.Imagen = new Imagen { imgUrl = txtUrl.Text }; VER ESTO SI ESTA OK ??
+                
 
                 if (articulo.ID != 0)
                 {
@@ -85,7 +86,28 @@ namespace CRUD
                         return;
                     }
                     artMod.modificar(articulo);
-                    artMod.modificarImagen(articulo);
+
+                    // Modificar imágenes si el artículo existe
+                    List<string> imagenesActuales = artMod.obtenerImagenesPorArticulo(articulo.ID);
+
+                    // Eliminar imágenes que ya no están en la lista
+                    foreach (string imagenUrl in imagenesActuales)
+                    {
+                        if (!imagenesUrls.Contains(imagenUrl))
+                        {
+                            artMod.eliminarImagen(imagenUrl);
+                        }
+                    }
+
+                    // Agregar nuevas imágenes
+                    foreach (string imagenUrl in imagenesUrls)
+                    {
+                        if (!imagenesActuales.Contains(imagenUrl))
+                        {
+                            artMod.modificarImagen(articulo.ID, imagenUrl);
+                        }
+                    }
+
                     MessageBox.Show("Articulo Modificado con Exito!");
                 }
                 else
@@ -94,7 +116,10 @@ namespace CRUD
                     int idArticulo = artNegocio.obtenerUltimoId();
                     if (idArticulo > 0)
                     {
-                        artNegocio.agregarImagen(idArticulo, articulo.Imagen.imgUrl);
+                        foreach (string imagenUrl in imagenesUrls)
+                        {
+                            artNegocio.agregarImagen(idArticulo, imagenUrl);
+                        }
                     }
                     MessageBox.Show("Articulo Agregado con Exito!");
                 }
@@ -111,6 +136,8 @@ namespace CRUD
         {
             CategoriaNegocio catNegocio = new CategoriaNegocio();
             MarcaNegocio marNegocio = new MarcaNegocio();
+            ModificarArticuloNegocio artMod = new ModificarArticuloNegocio();
+
 
             try
             {
@@ -130,8 +157,20 @@ namespace CRUD
                     txtPrecio.Text = articulo.Precio.ToString();
                     cbCategoria.SelectedValue = articulo.Categoria.Id;
                     cbMarca.SelectedValue = articulo.Marca.Id;
-                    txtUrl.Text = articulo.Imagen.imgUrl;
-                    cargarImagen(articulo.Imagen.imgUrl);
+                    //txtUrl.Text = articulo.Imagen.imgUrl;
+                    //cargarImagen(articulo.Imagen.imgUrl);
+
+                    List<string> imagenesUrls = artMod.obtenerImagenesPorArticulo(articulo.ID);
+
+                    if (imagenesUrls != null && imagenesUrls.Count > 0)
+                    {
+                        lbImagenesAgregar.Items.Clear();
+                        foreach (string imagenUrl in imagenesUrls)
+                        {
+                            lbImagenesAgregar.Items.Add(imagenUrl);
+                        }
+                    }
+
                 }
             }
             catch (Exception ex )
@@ -167,6 +206,48 @@ namespace CRUD
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        List<string> imagenesUrls = new List<string>();
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUrl.Text))
+            {
+                imagenesUrls.Add(txtUrl.Text);
+                lbImagenesAgregar.Items.Add(txtUrl.Text);  // lstImagenes es el ListBox que muestra las URLs
+                txtUrl.Clear();  // Limpiar el campo de texto
+            }
+        }
+
+        private void lbImagenesAgregar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbImagenesAgregar.SelectedIndex != -1)
+            {
+                string selectedImageUrl = lbImagenesAgregar.SelectedItem.ToString();
+                cargarImagen(selectedImageUrl);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (lbImagenesAgregar.SelectedIndex != -1)
+            {
+                // Obtener la URL seleccionada
+                string selectedImageUrl = lbImagenesAgregar.SelectedItem.ToString();
+
+                // Eliminar la URL de la lista de URLs
+                //imagenesUrls.Remove(selectedImageUrl);
+
+                // Eliminar la URL del ListBox
+                lbImagenesAgregar.Items.Remove(selectedImageUrl);
+
+                // Limpiar el PictureBox (opcional)
+                //pbArticuloPreview.Image = null;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una imagen para eliminar.");
+            }
         }
     }
 }
