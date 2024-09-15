@@ -33,7 +33,7 @@
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNuevaMarca = new System.Windows.Forms.TextBox();
+            this.txtNuevaCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblNuevaMarca = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.txtNuevaMarca);
+            this.panel2.Controls.Add(this.txtNuevaCategoria);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Location = new System.Drawing.Point(117, 222);
@@ -88,13 +88,15 @@
             this.panel2.Size = new System.Drawing.Size(259, 174);
             this.panel2.TabIndex = 0;
             // 
-            // txtNuevaMarca
+            // txtNuevaCategoria
             // 
-            this.txtNuevaMarca.Location = new System.Drawing.Point(13, 48);
-            this.txtNuevaMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNuevaMarca.Name = "txtNuevaMarca";
-            this.txtNuevaMarca.Size = new System.Drawing.Size(233, 22);
-            this.txtNuevaMarca.TabIndex = 2;
+            this.txtNuevaCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNuevaCategoria.Location = new System.Drawing.Point(13, 48);
+            this.txtNuevaCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNuevaCategoria.Name = "txtNuevaCategoria";
+            this.txtNuevaCategoria.Size = new System.Drawing.Size(233, 22);
+            this.txtNuevaCategoria.TabIndex = 2;
+            this.txtNuevaCategoria.TextChanged += new System.EventHandler(this.txtNuevaMarca_TextChanged);
             // 
             // label1
             // 
@@ -144,7 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNuevaMarca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgregarCategoria";
             this.Text = "frmAgregarCategoria";
             this.Load += new System.EventHandler(this.frmAgregarCategoria_Load);
@@ -163,7 +165,7 @@
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtNuevaMarca;
+        private System.Windows.Forms.TextBox txtNuevaCategoria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblNuevaMarca;

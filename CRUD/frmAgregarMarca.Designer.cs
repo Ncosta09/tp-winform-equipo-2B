@@ -65,11 +65,13 @@
             // 
             // txtNuevaMarca
             // 
+            this.txtNuevaMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNuevaMarca.Location = new System.Drawing.Point(13, 48);
             this.txtNuevaMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNuevaMarca.Name = "txtNuevaMarca";
             this.txtNuevaMarca.Size = new System.Drawing.Size(233, 22);
             this.txtNuevaMarca.TabIndex = 2;
+            this.txtNuevaMarca.TextChanged += new System.EventHandler(this.txtNuevaMarca_TextChanged);
             // 
             // btnGuardar
             // 

@@ -26,6 +26,33 @@ namespace CRUD
             this.articulo = articuloSeleccionado;
         }
 
+        private bool validarArticulo()
+        {
+            if(string.IsNullOrEmpty(txtPrecio.Text))
+            {
+                MessageBox.Show("Debe ingresar un numero en el campo precio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool validarModificar()
+        {
+            if (cbCategoria.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una categoria.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+            if (cbMarca.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una marca.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+
+            return false;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Articulo art = new Articulo();
@@ -34,6 +61,11 @@ namespace CRUD
 
             try
             {
+                if (validarArticulo())
+                {
+                    return;
+                }
+
                 if (articulo == null) 
                 {
                     articulo = new Articulo();
@@ -48,6 +80,10 @@ namespace CRUD
 
                 if (articulo.ID != 0)
                 {
+                    if (validarModificar())
+                    {
+                        return;
+                    }
                     artMod.modificar(articulo);
                     artMod.modificarImagen(articulo);
                     MessageBox.Show("Articulo Modificado con Exito!");

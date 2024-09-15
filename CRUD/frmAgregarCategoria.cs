@@ -18,6 +18,7 @@ namespace CRUD
         public frmAgregarCategoria()
         {
             InitializeComponent();
+            btnGuardar.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -27,8 +28,7 @@ namespace CRUD
 
             try
             {
-                categoria.Descripcion = txtNuevaMarca.Text;
-
+                categoria.Descripcion = txtNuevaCategoria.Text;
                 crearCategoria.agregar(categoria);
                 MessageBox.Show("Categoria Agregada con Exito!");
                 cargarCategorias();
@@ -38,8 +38,6 @@ namespace CRUD
                 MessageBox.Show(ex.ToString());
             }
         }
-
-
 
         private void cargarCategorias()
         {
@@ -60,6 +58,10 @@ namespace CRUD
             cargarCategorias();
         }
 
+        private void txtNuevaMarca_TextChanged(object sender, EventArgs e)
+        {
+            btnGuardar.Enabled = !string.IsNullOrEmpty(txtNuevaCategoria.Text);
+        }
     }
 
 }

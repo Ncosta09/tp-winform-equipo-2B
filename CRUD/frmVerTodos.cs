@@ -108,24 +108,24 @@ namespace CRUD
         {
             if(comboBoxCampo.SelectedIndex < 0)
             {
-                MessageBox.Show("Seleccione un campo!");
+                MessageBox.Show("Debe seleccionar un campo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
             if(comboBoxCriterio.SelectedIndex < 0)
             {
-                MessageBox.Show("Seleccione un criterio!");
+                MessageBox.Show("Debe seleccionar un criterio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
             if(comboBoxCampo.SelectedItem.ToString() == "Precio")
             {
                 if (string.IsNullOrEmpty(textBoxFiltroAvanzado.Text))
                 {
-                    MessageBox.Show("Cargue el campo de numeros!");
+                    MessageBox.Show("Debe cargar el campo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
                 if (!(soloNumeros(textBoxFiltroAvanzado.Text)))
                 {
-                    MessageBox.Show("Solo ingrese numeros!");
+                    MessageBox.Show("Debe ingresar unicamente numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return true;
                 }
             }
@@ -181,6 +181,12 @@ namespace CRUD
 
                     return;
             }*/
+
+            if (dgvArticulos.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un elemento antes de modificarlo.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             Articulo seleccionado;
             seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;

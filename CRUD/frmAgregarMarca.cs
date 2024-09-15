@@ -18,6 +18,7 @@ namespace CRUD
         public frmAgregarMarca()
         {
             InitializeComponent();
+            btnGuardar.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -58,6 +59,10 @@ namespace CRUD
             cargarMarcas();
         }
 
-     
+        private void txtNuevaMarca_TextChanged(object sender, EventArgs e)
+        {
+            btnGuardar.Enabled = !string.IsNullOrEmpty(txtNuevaMarca.Text);
+        }
+
     }
 }
