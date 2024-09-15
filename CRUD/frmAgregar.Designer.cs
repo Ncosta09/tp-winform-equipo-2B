@@ -47,13 +47,13 @@
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.lbImagenesAgregar = new System.Windows.Forms.ListBox();
             this.lblPreview = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.pbArticuloPreview = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticuloPreview)).BeginInit();
             this.SuspendLayout();
@@ -264,6 +264,30 @@
             this.panel1.Size = new System.Drawing.Size(496, 622);
             this.panel1.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::CRUD.Properties.Resources.multiply;
+            this.button1.Location = new System.Drawing.Point(389, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 65;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAgregarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarImagen.Image = global::CRUD.Properties.Resources.plus;
+            this.btnAgregarImagen.Location = new System.Drawing.Point(389, 451);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(50, 50);
+            this.btnAgregarImagen.TabIndex = 64;
+            this.btnAgregarImagen.UseVisualStyleBackColor = false;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // lbImagenesAgregar
             // 
             this.lbImagenesAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -333,30 +357,6 @@
             this.pbArticuloPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticuloPreview.TabIndex = 18;
             this.pbArticuloPreview.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CRUD.Properties.Resources.multiply;
-            this.button1.Location = new System.Drawing.Point(388, 510);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 65;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnAgregarImagen
-            // 
-            this.btnAgregarImagen.BackColor = System.Drawing.SystemColors.Window;
-            this.btnAgregarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarImagen.Image = global::CRUD.Properties.Resources.plus;
-            this.btnAgregarImagen.Location = new System.Drawing.Point(389, 451);
-            this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(50, 50);
-            this.btnAgregarImagen.TabIndex = 64;
-            this.btnAgregarImagen.UseVisualStyleBackColor = false;
-            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // frmAgregar
             // 

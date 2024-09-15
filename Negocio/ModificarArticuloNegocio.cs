@@ -95,7 +95,7 @@ namespace Negocio
 
             try
             {
-                datos.setConsulta("DELETE FROM IMAGENES WHERE ImagenUrl = @imagenUrl");
+                datos.setConsulta("DELETE FROM IMAGENES WHERE ImagenUrl LIKE @imagenUrl");
                 //datos.setParametro("@idArticulo", idArticulo); //IdArticulo = @idArticulo AND
                 datos.setParametro("@imagenUrl", imagenUrl);
                 datos.ejecutarAccion();

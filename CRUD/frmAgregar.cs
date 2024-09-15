@@ -160,17 +160,19 @@ namespace CRUD
                     //txtUrl.Text = articulo.Imagen.imgUrl;
                     //cargarImagen(articulo.Imagen.imgUrl);
 
-                    List<string> imagenesUrls = artMod.obtenerImagenesPorArticulo(articulo.ID);
+                    // Aquí cargas las imágenes existentes
+                    List<string> imagenesUrlsCargadas = artMod.obtenerImagenesPorArticulo(articulo.ID);
 
-                    if (imagenesUrls != null && imagenesUrls.Count > 0)
+                    if (imagenesUrlsCargadas != null && imagenesUrlsCargadas.Count > 0)
                     {
+                        imagenesUrls.Clear(); // Limpia la lista existente
                         lbImagenesAgregar.Items.Clear();
-                        foreach (string imagenUrl in imagenesUrls)
+                        foreach (string imagenUrl in imagenesUrlsCargadas)
                         {
-                            lbImagenesAgregar.Items.Add(imagenUrl);
+                            imagenesUrls.Add(imagenUrl);  // Añade a la lista interna
+                            lbImagenesAgregar.Items.Add(imagenUrl);  // Añade al ListBox
                         }
                     }
-
                 }
             }
             catch (Exception ex )
@@ -213,8 +215,15 @@ namespace CRUD
         {
             if (!string.IsNullOrEmpty(txtUrl.Text))
             {
-                imagenesUrls.Add(txtUrl.Text);
-                lbImagenesAgregar.Items.Add(txtUrl.Text);  // lstImagenes es el ListBox que muestra las URLs
+                if (!imagenesUrls.Contains(txtUrl.Text)) // Verifica si ya existe
+                {
+                    imagenesUrls.Add(txtUrl.Text);
+                    lbImagenesAgregar.Items.Add(txtUrl.Text);  // lstImagenes es el ListBox que muestra las URLs
+                }
+                else
+                {
+                    MessageBox.Show("Esta imagen ya fue agregada.");
+                }
                 txtUrl.Clear();  // Limpiar el campo de texto
             }
         }
@@ -236,13 +245,11 @@ namespace CRUD
                 string selectedImageUrl = lbImagenesAgregar.SelectedItem.ToString();
 
                 // Eliminar la URL de la lista de URLs
-                //imagenesUrls.Remove(selectedImageUrl);
+                imagenesUrls.Remove(selectedImageUrl);
 
                 // Eliminar la URL del ListBox
                 lbImagenesAgregar.Items.Remove(selectedImageUrl);
 
-                // Limpiar el PictureBox (opcional)
-                //pbArticuloPreview.Image = null;
             }
             else
             {
