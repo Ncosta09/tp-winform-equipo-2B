@@ -104,7 +104,47 @@ namespace CRUD
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
         }*/
+        private bool validarFiltro()
+        {
+            if(comboBoxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione un campo!");
+                return true;
+            }
+            if(comboBoxCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione un criterio!");
+                return true;
+            }
+            if(comboBoxCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(textBoxFiltroAvanzado.Text))
+                {
+                    MessageBox.Show("Cargue el campo de numeros!");
+                    return true;
+                }
+                if (!(soloNumeros(textBoxFiltroAvanzado.Text)))
+                {
+                    MessageBox.Show("Solo ingrese numeros!");
+                    return true;
+                }
+            }
 
+            return false;
+        }
+
+        private bool soloNumeros(string numeros)
+        {
+            foreach(char caracter in numeros)
+            {
+                if (!(char.IsNumber(caracter)))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 
         private void btnBusquedaAvanzada_Click(object sender, EventArgs e)
         {
@@ -113,6 +153,11 @@ namespace CRUD
 
             try
             {
+                if (validarFiltro()) 
+                {
+                    return;
+                }
+
                 string campo = comboBoxCampo.SelectedItem.ToString();
                 string criterio = comboBoxCriterio.SelectedItem.ToString();
                 string filtro = textBoxFiltroAvanzado.Text;
