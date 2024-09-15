@@ -27,17 +27,21 @@ namespace CRUD
             {
                 listaArticulo = negocio.listar();
                 dgvArticulos.DataSource = listaArticulo;
-                dgvArticulos.Columns["Id"].Visible = false;
-                dgvArticulos.Columns["Imagen"].Visible = false;
-                dgvArticulos.Columns["Descripcion"].Visible = false;
-                dgvArticulos.Columns["Categoria"].Visible = false;
-                dgvArticulos.Columns["Marca"].Visible = false;
-                //pboxImagenArticulo.Load(listaArticulo[0].Imagen.imgUrl);
+                ocultarColumnas();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
+            dgvArticulos.Columns["Categoria"].Visible = false;
+            dgvArticulos.Columns["Marca"].Visible = false;
         }
 
         private void frmEliminar_Load(object sender, EventArgs e)
@@ -86,6 +90,39 @@ namespace CRUD
             {
 
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void filtroBuscar()
+        {
+            List<Articulo> listaFiltrada;
+
+            if (tbxBuscar.Text != "")
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToLower().Contains(tbxBuscar.Text.ToLower()));
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
+
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            filtroBuscar();
+        }
+
+        private void tbxBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                filtroBuscar();
+                e.SuppressKeyPress = true;
             }
         }
     }
