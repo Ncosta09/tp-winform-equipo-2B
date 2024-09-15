@@ -201,7 +201,7 @@ namespace CRUD
 
             modificarArticulo.FormClosed += (s, args) =>
             {
-                //ACTUALIZA LOS DATOS DESPUES DE CERRAR EL FORMULARIO DE MODIFICAR
+                //ACTUALIZA LOS DATOS DESPUES DE CERRAR EL FORMULARIO DE MODIFIC
                 cargar();
             };
 

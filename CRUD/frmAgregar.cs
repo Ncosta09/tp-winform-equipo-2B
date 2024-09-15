@@ -53,6 +53,25 @@ namespace CRUD
             return false;
         }
 
+        private void limpiarTextbox()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtPrecio.Clear();
+            txtUrl.Clear();
+            lbImagenesAgregar.Items.Clear();
+            if (cbCategoria.Items.Count > 0)
+            {
+                cbCategoria.SelectedIndex = 0;
+            }
+
+            if (cbMarca.Items.Count > 0)
+            {
+                cbMarca.SelectedIndex = 0;
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Articulo art = new Articulo();
@@ -78,6 +97,7 @@ namespace CRUD
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
                 //articulo.Imagen = new Imagen { imgUrl = txtUrl.Text }; VER ESTO SI ESTA OK ??
                 
+
 
                 if (articulo.ID != 0)
                 {
@@ -109,6 +129,7 @@ namespace CRUD
                     }
 
                     MessageBox.Show("Articulo Modificado con Exito!");
+                    this.Close();
                 }
                 else
                 {
@@ -121,10 +142,11 @@ namespace CRUD
                             artNegocio.agregarImagen(idArticulo, imagenUrl);
                         }
                     }
+
                     MessageBox.Show("Articulo Agregado con Exito!");
+                    limpiarTextbox();
                 }
 
-                this.Close();
             }
             catch (Exception ex)
             {
