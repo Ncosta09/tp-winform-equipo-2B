@@ -65,7 +65,7 @@
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(833, 117);
+            this.pbArticulo.Location = new System.Drawing.Point(833, 108);
             this.pbArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbArticulo.Name = "pbArticulo";
             this.pbArticulo.Size = new System.Drawing.Size(389, 390);
@@ -113,7 +113,7 @@
             // 
             this.textBoxFiltroAvanzado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFiltroAvanzado.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(23, 212);
+            this.textBoxFiltroAvanzado.Location = new System.Drawing.Point(23, 203);
             this.textBoxFiltroAvanzado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFiltroAvanzado.Name = "textBoxFiltroAvanzado";
             this.textBoxFiltroAvanzado.Size = new System.Drawing.Size(160, 22);
@@ -122,11 +122,11 @@
             // labelCampo
             // 
             this.labelCampo.AutoSize = true;
-            this.labelCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCampo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCampo.Location = new System.Drawing.Point(23, 44);
             this.labelCampo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCampo.Name = "labelCampo";
-            this.labelCampo.Size = new System.Drawing.Size(67, 20);
+            this.labelCampo.Size = new System.Drawing.Size(66, 19);
             this.labelCampo.TabIndex = 0;
             this.labelCampo.Text = "Campo:";
             // 
@@ -135,7 +135,7 @@
             this.comboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCampo.Font = new System.Drawing.Font("Arial", 7.8F);
             this.comboBoxCampo.FormattingEnabled = true;
-            this.comboBoxCampo.Location = new System.Drawing.Point(23, 76);
+            this.comboBoxCampo.Location = new System.Drawing.Point(23, 67);
             this.comboBoxCampo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxCampo.Name = "comboBoxCampo";
             this.comboBoxCampo.Size = new System.Drawing.Size(160, 24);
@@ -147,7 +147,7 @@
             this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCriterio.Font = new System.Drawing.Font("Arial", 7.8F);
             this.comboBoxCriterio.FormattingEnabled = true;
-            this.comboBoxCriterio.Location = new System.Drawing.Point(23, 144);
+            this.comboBoxCriterio.Location = new System.Drawing.Point(23, 135);
             this.comboBoxCriterio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxCriterio.Name = "comboBoxCriterio";
             this.comboBoxCriterio.Size = new System.Drawing.Size(160, 24);
@@ -160,7 +160,7 @@
             this.BtnModificarArticulo.Font = new System.Drawing.Font("Arial", 7.8F);
             this.BtnModificarArticulo.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarArticulo.Image")));
             this.BtnModificarArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnModificarArticulo.Location = new System.Drawing.Point(23, 480);
+            this.BtnModificarArticulo.Location = new System.Drawing.Point(23, 470);
             this.BtnModificarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnModificarArticulo.Name = "BtnModificarArticulo";
             this.BtnModificarArticulo.Size = new System.Drawing.Size(208, 46);
@@ -172,20 +172,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label1.Font = new System.Drawing.Font("Arial", 10.2F);
             this.label1.Location = new System.Drawing.Point(23, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(68, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Criterio:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label2.Font = new System.Drawing.Font("Arial", 10.2F);
             this.label2.Location = new System.Drawing.Point(23, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Filtro:";
             // 
@@ -193,7 +193,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(307, 510);
+            this.label3.Location = new System.Drawing.Point(307, 500);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(326, 16);
             this.label3.TabIndex = 20;
